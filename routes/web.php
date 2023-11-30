@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('base');
 });
+
+Route::get('/users', [UserController::class, 'index'])->name('user.index');
+
+Route::post('/users', [UserController::class, 'post'])->name('user.post');
