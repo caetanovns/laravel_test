@@ -49,6 +49,6 @@ class UserController extends Controller
 
         User::create($request->input());
 
-        return redirect('/users');
+        return redirect()->route('user.store')->with(['success' => 'Usuário registrado.']);
     }
 }

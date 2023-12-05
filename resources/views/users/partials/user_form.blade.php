@@ -5,6 +5,7 @@
                 <section class="bg-white dark:bg-gray-900">
                     <div class="max-w-2xl px-4 py-8 mx-auto lg:py-16">
                         <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Adicionar Usuário</h2>
+                        @include('utils.success')
                         @include('utils.errors')
                         <form method="POST">
                             @csrf
