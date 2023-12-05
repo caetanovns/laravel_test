@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('base');
-});
-
 Route::get('/users', [UserController::class, 'index'])->name('user.index');
 
 Route::post('/users', [UserController::class, 'store'])->name('user.store');
