@@ -14,8 +14,15 @@ class UserController extends Controller
         return view('users/index');
     }
 
-    public function post(Request $request): RedirectResponse
+    public function store(Request $request)
     {
-        return redirect('/users');
+        $validated = $request->validate([
+            'name' => 'required'
+        ]);
+        if ($validated) {
+            return "ok";
+        } else {
+            return "NOK";
+        }
     }
 }
